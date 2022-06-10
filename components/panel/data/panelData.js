@@ -38,6 +38,10 @@ export const backend = [
     id: 1,
     name: "NodeJS",
   },
+  {
+    id: 2,
+    name: "NPM",
+  },
 
   {
     id: 3,
@@ -57,37 +61,38 @@ export const backend = [
   },
 ];
 
-export const other = [
+export const versionControl = [
   {
     id: 1,
-    name: "React Native",
-  },
-  {
-    id: 2,
-    name: "NPM",
-  },
-  {
-    id: 3,
     name: "Git",
   },
   {
-    id: 4,
+    id: 2,
     name: "Github",
   },
+];
+export const hosting = [
   {
-    id: 5,
+    id: 1,
     name: "Heroku",
   },
   {
-    id: 6,
+    id: 2,
     name: "Vercel",
+  },
+];
+
+export const mobile = [
+  {
+    id: 1,
+    name: "React Native",
   },
 ];
 
 const PanelBoxItem = ({ name }) => {
   return (
     <li className="mb-2 ">
-      <p className="my-1 text-sm transition transform delay-150 ease-in hover:-translate-y-1 hover:text-gray-300  ">
+      <p className="my-1 text-sm transition transform delay-150 ease-in hover:-translate-y-1 hover:text-gray-300">
         {name}
       </p>
     </li>
@@ -102,6 +107,13 @@ export const backendList = backend.map((list) => (
   <PanelBoxItem key={list.id} name={list.name} />
 ));
 
-export const otherList = other.map((list) => (
+export const hostingList = hosting.map((list) => (
+  <PanelBoxItem key={list.id} name={list.name} />
+));
+
+export const versionControlList = versionControl.map((list) => (
+  <PanelBoxItem key={list.id} name={list.name} />
+));
+export const mobileList = mobile.map((list) => (
   <PanelBoxItem key={list.id} name={list.name} />
 ));

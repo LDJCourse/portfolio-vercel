@@ -4,37 +4,30 @@ import React, { useEffect } from "react";
 import useToggle from "../hooks/useToggle";
 
 export const PanelBox = ({ title, color, children }) => {
-  const [textHover, setTextHover] = useToggle(false);
-
   // Set state to false if true
-  useEffect(() => {
-    if (textHover) {
-      const timer = setTimeout(() => {
-        setTextHover(false);
-      }, 2000);
-      return () => {
-        clearTimeout(timer);
-      };
-    }
-  }, [textHover]);
+  // useEffect(() => {
+  //   if (textHover) {
+  //     const timer = setTimeout(() => {
+  //       setTextHover(false);
+  //     }, 2000);
+  //     return () => {
+  //       clearTimeout(timer);
+  //     };
+  //   }
+  // }, [textHover]);
 
-  // Frontend  hover
-  const handleTextHover = () => {
-    setTextHover(!textHover);
-  };
+  // // Frontend  hover
+  // const handleTextHover = () => {
+  //   setTextHover(!textHover);
+  // };
 
   return (
-    <div className="p-2 m-4 w-80 lg:border-l-2 lg:border-t-0 border-t border-red-400  ">
+    <div className="p-2 m-2 w-80 md:border-l-2 md:border-b-0 border-b-2 border-red-400  ">
       <div className="">
-        <PanelBoxHeader textHover={textHover} title={title} />
+        <PanelBoxHeader title={title} />
       </div>
-      <div
-        onMouseEnter={handleTextHover}
-        className={` mb-5 p-4 font-bold text-xl text-red-400 `}
-      >
-        <ul className="divide-y-2 divide-red-400  cursor-default">
-          {children}
-        </ul>
+      <div className={`mb-5 p-4 font-bold text-xl text-red-400`}>
+        <ul className="divide-y divide-red-400 cursor-default">{children}</ul>
       </div>
     </div>
   );
@@ -43,7 +36,7 @@ export const PanelBox = ({ title, color, children }) => {
 const PanelBoxHeader = ({ title, textHover }) => {
   return (
     <h1
-      className={` font-mono font-bold text-center text-2xl text-red-400   cursor-default `}
+      className={`font-mono font-bold text-center text-2xl text-red-400 cursor-default`}
     >
       {title}
     </h1>
