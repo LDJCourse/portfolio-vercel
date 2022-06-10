@@ -18,7 +18,7 @@ const Timeline = () => {
   ));
 
   return (
-    <div className="h-80 flex flex-col sm:justify-around ">
+    <div className="w-full flex flex-col sm:justify-around ">
       <h1 className="py-4 px-3 text-center text-xl sm:text-2xl md:text-4xl text-red-400 ">
         Here is a selection of the courses i have studied
       </h1>
