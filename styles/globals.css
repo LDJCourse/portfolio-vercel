@@ -61,10 +61,6 @@ body {
   height: 550px;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* Blurry background animation */
 
 @layer utilities {
@@ -92,3 +88,6 @@ body {
     rgba(255, 255, 255, 0) 100%
   );
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

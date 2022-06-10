@@ -11,7 +11,7 @@ const Navbar = () => {
       </div>
       <div className="flex justify-between">
         {/* <NavbarItem path={"/about"} icon={"person"} name={"About"} /> */}
-        <NavbarItem path={"/experience"} icon={"school"} name={"Experience"} />
+        <NavbarItem path={"/experience"} icon={"person"} name={"About me"} />
         <NavbarItem path={"/projects"} icon={"sort"} name={"Projects"} />
         <NavbarItem path={"/games"} icon={"stadia_controller"} name={"Games"} />
       </div>
