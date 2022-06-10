@@ -33,7 +33,7 @@ const TimelineElement = ({ title, author, description, date, completed }) => {
   return (
     <div className="w-9/12 md:w-4/12 mx-5 flex flex-col justify-between  h-32 rounded shrink-0 timeline-element text-red-400   shadow shadow-red-200 ">
       <h1 className="px-2 font-semibold text-xl truncate">{title}</h1>
-      <ProgressBar completed={completed} />
+      {/* <ProgressBar completed={completed} /> */}
       <div className="p-1 flex justify-between items-end tracking-wide  text-black bg-red-400">
         <h1 className="text-sm font-bold">{author}</h1>
         <div className="text-xs italic font-semibold">
